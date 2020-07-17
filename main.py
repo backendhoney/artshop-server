@@ -32,7 +32,7 @@ def upload_file():
         db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234', db='user', charset='utf8')
         try:
             cursor = db.cursor()
-            sql = "SELECT * FROM main ORDER BY score ASC"
+            sql = "SELECT * FROM main ORDER BY score DESC"
             print(sql)
             cursor.execute(sql)
             result = cursor.fetchall()
